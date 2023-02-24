@@ -1,4 +1,5 @@
 import  { useState } from 'react'
+import { Alert } from 'react-native';
 import { searchAddress } from '../../repositories/cep.repository';
 import { HomeViewModel } from './types';
 
@@ -13,6 +14,7 @@ export default function useHomeViewModel():HomeViewModel {
 			console.log(response.street);
 		}catch(error){
 			console.log(error);
+			Alert.alert('Error', 'Not found!');
 		}finally{
 			setIsLoading(false);
 		}

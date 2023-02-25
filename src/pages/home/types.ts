@@ -3,4 +3,9 @@ export interface HomeViewModel{
     setCep:React.Dispatch<React.SetStateAction<string>>;
     isLoading:boolean;
     onSubmit:()=>void;
+    hasError:boolean;
+    errorMessage:string;
+    clearText:()=>void;
+    noInternetMessage:string;
+    hasInternet:boolean;
 }

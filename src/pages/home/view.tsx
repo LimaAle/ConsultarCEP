@@ -1,27 +1,35 @@
-import { View, Text, StyleSheet, Button, ActivityIndicator, TouchableOpacity } from 'react-native'
+import { Text, StyleSheet, ActivityIndicator, View } from 'react-native'
 import React from 'react'
 import useHomeViewModel from './view.model';
-import SearchBar from './components/searchBar';
+import SearchBar from './components/search_bar';
+import { useAppContext } from '../../context';
+import AppBackground from '../../common/components/app_background';
+import SearchButton from './components/search_button';
+import { COLORS } from '../../common/colors';
+import ErrorText from '../../common/components/error_text';
+import Card from '../../common/components/card';
+
 export default function HomeView() {
-	const { cep, setCep, isLoading, onSubmit, hasError, errorMessage, clearText,hasInternet } = useHomeViewModel();
+	const { cep, setCep, isLoading, onSubmit, hasError, errorMessage, clearText, hasInternet } = useHomeViewModel();
 
 	return (
-		<View style={styles.container}>
-			<Text>Digite um CEP para pesquisar.</Text>
-			<SearchBar  cep={cep} setCep={setCep} clearText={clearText}/>
+		<AppBackground>
+			<View style={{ flex: 1, justifyContent: "center",alignItems:'center' }}>
+				<Text style={styles.title}>Digite um CEP para pesquisar.</Text>
+				<SearchBar cep={cep} setCep={setCep} clearText={clearText} />
 
-			<Text>{hasError ? errorMessage : ''}</Text>
-			<Button onPress={onSubmit} title="Pesquisar" />
-			{isLoading ? <ActivityIndicator size={'large'} /> : <></>}
-			{!hasInternet?<Text>Sem internet</Text>:null}
-		</View>
+				{/* <ErrorText>{hasError ? errorMessage : ''}</ErrorText> */}
+
+				{isLoading ? <ActivityIndicator size={'large'} /> : <SearchButton onPress={onSubmit} title="Pesquisar" />}
+				{/* {!hasInternet ? <Text>Sem internet</Text> : null} */}
+			</View>
+			{/* <Card></Card> */}
+		</AppBackground>
 	)
 }
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
+	title: {
+		fontSize: 24,
+		color: COLORS.white
 	},
 });

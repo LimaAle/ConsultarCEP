@@ -29,7 +29,8 @@
     "react-native-screens": "~3.18.0",
     "typescript": "^4.6.3",
     "expo-network": "~5.0.0",
-    "@react-native-community/netinfo": "9.3.5"
+    "@react-native-community/netinfo": "9.3.5",
+    "expo-linear-gradient": "~12.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

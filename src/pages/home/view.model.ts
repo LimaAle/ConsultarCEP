@@ -3,6 +3,7 @@ import { Alert } from 'react-native';
 import { searchAddress } from '../../repositories/address.repository';
 import { HomeViewModel } from './types';
 import NetInfo from '@react-native-community/netinfo';
+import { useAppContext } from '../../context';
 
 export default function useHomeViewModel(): HomeViewModel {
 	const [cep, setCep] = useState<string>('');
@@ -12,6 +13,8 @@ export default function useHomeViewModel(): HomeViewModel {
 
 	let errorMessage: string = 'CEP inválido!';
 	let noInternetMessage: string = 'Sem conexão com a internet';
+
+	const { handleAddress} = useAppContext();
 
 	useEffect(() => {
 		const unsubscribe = NetInfo.addEventListener(state => {
@@ -32,6 +35,7 @@ export default function useHomeViewModel(): HomeViewModel {
 				setHasError(false);
 				setIsLoading(true);
 				const response = await searchAddress({ cep });
+				handleAddress(response)
 			}
 
 		} catch (error) {
@@ -44,6 +48,7 @@ export default function useHomeViewModel(): HomeViewModel {
 
 	const clearText = () => {
 		setCep('');
+		setHasError(false);
 	}
 
 	return {

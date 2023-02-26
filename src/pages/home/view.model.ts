@@ -4,6 +4,7 @@ import { searchAddress } from '../../repositories/address.repository';
 import { HomeViewModel } from './types';
 import NetInfo from '@react-native-community/netinfo';
 import { useAppContext } from '../../context';
+import { useNavigation } from '@react-navigation/native'
 
 export default function useHomeViewModel(): HomeViewModel {
 	const [cep, setCep] = useState<string>('');
@@ -16,6 +17,12 @@ export default function useHomeViewModel(): HomeViewModel {
 
 	const { handleAddress} = useAppContext();
 
+	const navigation = useNavigation()
+
+  function moveToDetailScreen(){
+		
+    navigation.navigate('detail');
+  }
 	useEffect(() => {
 		const unsubscribe = NetInfo.addEventListener(state => {
 			setHasInternet(state.isConnected);
@@ -36,6 +43,7 @@ export default function useHomeViewModel(): HomeViewModel {
 				setIsLoading(true);
 				const response = await searchAddress({ cep });
 				handleAddress(response)
+				moveToDetailScreen()
 			}
 
 		} catch (error) {

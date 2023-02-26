@@ -1,11 +1,10 @@
 
 import { AppContextProvider } from './src/context/';
-import HomeView from './src/pages/home/view';
-
+import {StackRoutes} from './src/routes'
 export default function App() {
   return (
     <AppContextProvider>
-      <HomeView />
+      <StackRoutes/>
     </AppContextProvider>
   );
 }

@@ -11,7 +11,12 @@ jest.mock('../view.model', () => {
     cep: '',
     setCep: jest.fn(),
     isLoading: false,
-    onSubmit: jest.fn()
+    onSubmit: jest.fn(),
+    hasError:false,
+    errorMessage:'error',
+    clearText:jest.fn(),
+    noInternetMessage:'nomessage',
+    hasInternet:false
   } as HomeViewModel));
   return fnHomeViewModel;
 });

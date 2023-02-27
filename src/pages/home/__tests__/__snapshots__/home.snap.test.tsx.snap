@@ -91,7 +91,7 @@ exports[`home view tests should render 1`] = `
           }
           accessible={true}
           collapsable={false}
-          focusable={false}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -155,29 +155,29 @@ exports[`home view tests should render 1`] = `
           PESQUISAR
         </Text>
       </View>
-      <View
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#b7094c",
-            "marginVertical": 12,
-            "padding": 8,
-            "width": "100%",
-          }
-        }
-      >
-        <Text
-          style={
-            {
-              "color": "#eee",
-            }
-          }
-        >
-          Sem internet!
-        </Text>
-      </View>
     </View>
   </RCTSafeAreaView>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#b7094c",
+        "marginVertical": 12,
+        "padding": 8,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#eee",
+        }
+      }
+    >
+      Sem internet!
+    </Text>
+  </View>
 </ViewManagerAdapter_ExpoLinearGradient>
 `;
 
@@ -336,28 +336,28 @@ exports[`home view tests should render with cep 1`] = `
           PESQUISAR
         </Text>
       </View>
-      <View
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "#b7094c",
-            "marginVertical": 12,
-            "padding": 8,
-            "width": "100%",
-          }
-        }
-      >
-        <Text
-          style={
-            {
-              "color": "#eee",
-            }
-          }
-        >
-          Sem internet!
-        </Text>
-      </View>
     </View>
   </RCTSafeAreaView>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#b7094c",
+        "marginVertical": 12,
+        "padding": 8,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#eee",
+        }
+      }
+    >
+      Sem internet!
+    </Text>
+  </View>
 </ViewManagerAdapter_ExpoLinearGradient>
 `;

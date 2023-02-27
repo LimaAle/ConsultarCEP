@@ -47,8 +47,7 @@ export default function useHomeViewModel(): HomeViewModel {
 			}
 
 		} catch (error) {
-			console.log(error);
-			Alert.alert('Error', 'Not found!');
+			Alert.alert('Erro!', 'CEP não encontrado!');
 		} finally {
 			setIsLoading(false);
 		}

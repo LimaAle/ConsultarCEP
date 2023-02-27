@@ -1,135 +1,363 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`home view tests should render 1`] = `
-<View
+<ViewManagerAdapter_ExpoLinearGradient
+  proxiedProperties={
+    {
+      "colors": [
+        4280490306,
+        4284372110,
+        4288644800,
+        4293189594,
+      ],
+      "endPoint": undefined,
+      "locations": undefined,
+      "startPoint": undefined,
+    }
+  }
   style={
     {
       "alignItems": "center",
-      "backgroundColor": "#fff",
+      "backgroundColor": "#eee",
       "flex": 1,
       "justifyContent": "center",
     }
   }
 >
-  <Text>
-    HomeScreen
-  </Text>
-  <TextInput
-    onChangeText={[MockFunction]}
+  <RCTSafeAreaView
     style={
       {
-        "borderWidth": 1,
-      }
-    }
-    value=""
-  />
-  <View
-    accessibilityRole="button"
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "opacity": 1,
+        "flex": 1,
       }
     }
   >
     <View
       style={
-        [
-          {},
-        ]
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
       }
     >
       <Text
         style={
-          [
-            {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "margin": 8,
-              "textAlign": "center",
-            },
-          ]
+          {
+            "color": "#eee",
+            "fontSize": 24,
+          }
         }
       >
-        Pesquisar
+        Digite um CEP para pesquisar.
       </Text>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#ddd",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "center",
+            "margin": 10,
+            "paddingLeft": 10,
+            "paddingRight": 10,
+          }
+        }
+      >
+        <Text />
+        <TextInput
+          keyboardType="numeric"
+          maxLength={9}
+          onChangeText={[Function]}
+          placeholder="CEP"
+          style={
+            {
+              "flex": 1,
+              "fontStyle": undefined,
+              "fontWeight": undefined,
+              "marginLeft": 15,
+              "maxWidth": 150,
+              "textDecorationLine": undefined,
+            }
+          }
+          value=""
+        />
+        <View
+          accessibilityState={
+            {
+              "disabled": true,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+        >
+          <Text />
+        </View>
+      </View>
+      <Text
+        style={
+          {
+            "color": "#b7094c",
+            "fontSize": 18,
+            "marginVertical": 8,
+          }
+        }
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "backgroundColor": "#231942",
+            "borderRadius": 20,
+            "elevation": 4,
+            "opacity": 1,
+            "padding": 10,
+            "paddingHorizontal": 15,
+            "shadowOffset": {
+              "height": 4,
+              "width": -2,
+            },
+            "shadowOpacity": 0.2,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#eee",
+            }
+          }
+        >
+          PESQUISAR
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#b7094c",
+            "marginVertical": 12,
+            "padding": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#eee",
+            }
+          }
+        >
+          Sem internet!
+        </Text>
+      </View>
     </View>
-  </View>
-</View>
+  </RCTSafeAreaView>
+</ViewManagerAdapter_ExpoLinearGradient>
 `;
 
 exports[`home view tests should render with cep 1`] = `
-<View
+<ViewManagerAdapter_ExpoLinearGradient
+  proxiedProperties={
+    {
+      "colors": [
+        4280490306,
+        4284372110,
+        4288644800,
+        4293189594,
+      ],
+      "endPoint": undefined,
+      "locations": undefined,
+      "startPoint": undefined,
+    }
+  }
   style={
     {
       "alignItems": "center",
-      "backgroundColor": "#fff",
+      "backgroundColor": "#eee",
       "flex": 1,
       "justifyContent": "center",
     }
   }
 >
-  <Text>
-    HomeScreen
-  </Text>
-  <TextInput
-    onChangeText={[MockFunction]}
+  <RCTSafeAreaView
     style={
       {
-        "borderWidth": 1,
-      }
-    }
-    value="04654000"
-  />
-  <View
-    accessibilityRole="button"
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      {
-        "opacity": 1,
+        "flex": 1,
       }
     }
   >
     <View
       style={
-        [
-          {},
-        ]
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
       }
     >
       <Text
         style={
-          [
-            {
-              "color": "#007AFF",
-              "fontSize": 18,
-              "margin": 8,
-              "textAlign": "center",
-            },
-          ]
+          {
+            "color": "#eee",
+            "fontSize": 24,
+          }
         }
       >
-        Pesquisar
+        Digite um CEP para pesquisar.
       </Text>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#ddd",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "center",
+            "margin": 10,
+            "paddingLeft": 10,
+            "paddingRight": 10,
+          }
+        }
+      >
+        <Text />
+        <TextInput
+          keyboardType="numeric"
+          maxLength={9}
+          onChangeText={[Function]}
+          placeholder="CEP"
+          style={
+            {
+              "flex": 1,
+              "fontStyle": undefined,
+              "fontWeight": undefined,
+              "marginLeft": 15,
+              "maxWidth": 150,
+              "textDecorationLine": undefined,
+            }
+          }
+          value=""
+        />
+        <View
+          accessibilityState={
+            {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+        >
+          <Text />
+        </View>
+      </View>
+      <Text
+        style={
+          {
+            "color": "#b7094c",
+            "fontSize": 18,
+            "marginVertical": 8,
+          }
+        }
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "backgroundColor": "#231942",
+            "borderRadius": 20,
+            "elevation": 4,
+            "opacity": 1,
+            "padding": 10,
+            "paddingHorizontal": 15,
+            "shadowOffset": {
+              "height": 4,
+              "width": -2,
+            },
+            "shadowOpacity": 0.2,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#eee",
+            }
+          }
+        >
+          PESQUISAR
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#b7094c",
+            "marginVertical": 12,
+            "padding": 8,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#eee",
+            }
+          }
+        >
+          Sem internet!
+        </Text>
+      </View>
     </View>
-  </View>
-</View>
+  </RCTSafeAreaView>
+</ViewManagerAdapter_ExpoLinearGradient>
 `;

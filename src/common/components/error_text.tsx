@@ -1,16 +1,20 @@
 import { Text, View,StyleSheet } from 'react-native'
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class ErrorText extends Component {
-  render() {
+interface errorTextProps{
+  text:string;
+}
+export default function ErrorText({text}:errorTextProps){
+  
     return (
-        <Text style={styles.text}>ErrorText</Text>
+        <Text style={styles.text}>{text}</Text>
     )
-  }
+  
 }
 const styles=StyleSheet.create({
   text:{
     fontSize:18,
-    color:'#b7094c'
+    color:'#b7094c',
+    marginVertical:8
   }
 })

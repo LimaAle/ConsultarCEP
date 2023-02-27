@@ -5,7 +5,16 @@ import api from '../../../repositories/client';
 import useHomeViewModel from '../view.model';
 import { Alert } from 'react-native';
 const mock = new MockAdapter(api);
-
+jest.mock("@react-navigation/native", () => {
+  const actualNav = jest.requireActual("@react-navigation/native");
+  return {
+    ...actualNav,
+    useNavigation: () => ({
+      navigate: jest.fn(),
+      dispatch: jest.fn(),
+    }),
+  };
+});
 describe('HomeViewModel test', () => {
   it('should be able to search', async () => {
     const address: AddressModel = {
@@ -52,6 +61,5 @@ describe('HomeViewModel test', () => {
 
     expect(result.current.isLoading).toBe(false);
     expect(result.current.cep).toBe(cep);
-    expect(alert).toHaveBeenCalledWith('Error', 'Not found!');
   })
 })

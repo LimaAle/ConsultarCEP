@@ -6,10 +6,9 @@ import AppBackground from '../../common/components/app_background';
 import SearchButton from './components/search_button';
 import ErrorText from '../../common/components/error_text';
 import Title from '../../common/components/title';
-import NoInternet from '../../common/components/no_internet';
 
 export default function HomeView() {
-	const { cep, setCep, isLoading, onSubmit, hasError, errorMessage, clearText, hasInternet } = useHomeViewModel();
+	const { cep, setCep, isLoading, onSubmit, hasError, errorMessage, clearText } = useHomeViewModel();
 
 	return (
 		<AppBackground>
@@ -18,8 +17,7 @@ export default function HomeView() {
 					<Title text='Digite um CEP para pesquisar.' />
 					<SearchBar cep={cep} setCep={setCep} clearText={clearText} />
 					<ErrorText text={hasError ? errorMessage : ''}/>
-					{isLoading ? <ActivityIndicator size={'large'} /> : <SearchButton onPress={onSubmit} title="Pesquisar" />}
-					
+					{isLoading ? <ActivityIndicator size={'large'} /> : <SearchButton onPress={onSubmit} title="Pesquisar" />}		
 				</View>
 			</SafeAreaView>
 		</AppBackground>
